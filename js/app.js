@@ -24,7 +24,8 @@ function createNewCard(title, content) {
   let cardContent = document.createElement('p')
   cardContent.classList.add('card-content')
   cardContent.textContent = content
-  card.style.backgroundColor = 'blue'
+
+  card.style.backgroundColor = `hsl(${Math.random() * 360}, 60%, 40%)`
   card.append(cardTitle, cardContent)
   trackNotes.append(card)
 }
