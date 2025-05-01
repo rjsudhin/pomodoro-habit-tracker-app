@@ -14,7 +14,7 @@ function checkingNotes() {
 
 // creating new cards
 function createNewCard(title, content) {
-  const card = document.createElement('div')
+  let card = document.createElement('div')
   card.classList.add('new-card')
 
   let cardTitle = document.createElement('h3')
@@ -24,7 +24,7 @@ function createNewCard(title, content) {
   let cardContent = document.createElement('p')
   cardContent.classList.add('card-content')
   cardContent.textContent = content
-
+  card.style.backgroundColor = 'blue'
   card.append(cardTitle, cardContent)
   trackNotes.append(card)
 }
@@ -36,11 +36,8 @@ function loadingData() {
   let storedData = localStorage
   for (let i = 0; i < storedData.length; i++) {
     const key = localStorage.key(i)
-    console.log(`${key}`)
     const value = localStorage[key]
-    console.log(`--${value}-`)
-    card = createNewCard(key, value)
-    console.log(card)
+    createNewCard(key, value)
   }
 }
 

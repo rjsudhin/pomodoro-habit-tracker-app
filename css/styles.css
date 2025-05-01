@@ -36,7 +36,6 @@ body {
 #container {
   width: 100%;
   max-width: 680px;
-  border: 1px solid black;
   padding: 1rem;
 }
 
@@ -46,6 +45,7 @@ body {
   gap: 1rem;
 }
 
+/* user-info-container */
 #container .top-container .user-info-container {
   display: flex;
   min-height: 180px;
@@ -55,8 +55,21 @@ body {
   justify-content: center;
   gap: 1rem;
   border-radius: var(--border-curve);
+  padding: 1.5rem 0;
 }
 
+.user-info-container h2 {
+  font-size: 1.5rem;
+}
+
+.user-info-container .content-description {
+  font-size: 1rem;
+}
+
+/* user-info-container */
+
+
+/* timer-info-container */
 #container .top-container .timer-info-container {
   background-color: var(--accent);
   min-height: 180px;
@@ -66,9 +79,42 @@ body {
   align-items: center;
   gap: 1rem;
   border-radius: var(--border-curve);
-
+  padding: 1.5rem 1rem;
 }
 
+.timer-info-container #timer-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--black-text);
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.buttons button {
+  flex: 1 1 50%;
+  height: 30px;
+  border: none;
+  border-radius: var(--border-curve);
+  background-color: transparent;
+  box-shadow: 1px 1px 1px 1px var(--black-text);
+  color: var(--black-text);
+  font-weight: bold;
+}
+
+.buttons button:active {
+  border-radius: unset;
+}
+
+/* timer-info-container */
+
+
+/* tracking-note-container */
 #container .tracking-notes-container {
   display: flex;
   flex-direction: column;
@@ -79,16 +125,48 @@ body {
   justify-content: center;
   margin: 1rem 0;
   border-radius: var(--border-curve);
-
+  padding: 1.5rem 2rem;
 }
+
+.tracking-notes-container h3 {
+  font-size: 1.5rem;
+}
+
+.tracking-notes-container input {
+  width: 80%;
+  padding: 0.5rem;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  color: var(--text);
+  outline: unset;
+  border-bottom: var(--input-border);
+  font-size: 0.8rem;
+}
+
+.tracking-notes-container .adding-habit-btn {
+  width: 120px;
+  height: 30px;
+}
+/* tracking-note-container */
 
 
 #track-notes {
+
 }
 
 #track-notes .new-card {
-  min-height: 180px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  border: 1px solid black;
+  border-radius: var(--border-curve);
 }
+
+
 
 
 
