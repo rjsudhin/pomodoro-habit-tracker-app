@@ -164,6 +164,12 @@ body {
   min-height: 200px;
   border: 1px solid black;
   border-radius: var(--border-curve);
+  gap: 1rem;
+}
+
+.new-card > div {
+  border: 1px solid #eee;
+  width: 100%;
 }
 
 

@@ -17,6 +17,9 @@ function createNewCard(title, content) {
   let card = document.createElement('div')
   card.classList.add('new-card')
 
+  let topContent = document.createElement('div')
+  topContent.classList.add('top-content')
+
   let cardTitle = document.createElement('h3')
   cardTitle.classList.add('card-title')
   cardTitle.textContent = title
@@ -25,8 +28,17 @@ function createNewCard(title, content) {
   cardContent.classList.add('card-content')
   cardContent.textContent = content
 
+
+  topContent.append(cardTitle, cardContent)
+
+  let bottomContent = document.createElement('div')
+  let deleteBtn = document.createElement('button')
+  deleteBtn.textContent = 'delete'
+  deleteBtn.classList.add('delete-btn')
+  bottomContent.append(deleteBtn)
+
   card.style.backgroundColor = `hsl(${Math.random() * 360}, 60%, 40%)`
-  card.append(cardTitle, cardContent)
+  card.append(topContent, bottomContent)
   trackNotes.append(card)
 }
 
