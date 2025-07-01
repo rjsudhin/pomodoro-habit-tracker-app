@@ -138,7 +138,13 @@ body {
   border: none;
   border-radius: var(--border-curve);
   background-color: var(--accent);
-  color: var(--text);
+  color: var(--black-text);
   font-size: 0.8rem;
   font-weight: bold;
+}
+.adding-habit-btn:hover {
+  cursor: pointer;
+}
+.adding-habit-btn:active {
+  border-radius: unset;
 }
