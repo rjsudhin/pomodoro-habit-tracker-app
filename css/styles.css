@@ -99,10 +99,19 @@ body {
   font-size: clamp(0.8rem, 2vw, 0.9rem);
   border: none;
   border-radius: var(--border-curve);
-  background-color: var(--text);
+  background-color: transparent;
   color: var(--black-text);
   font-weight: bold;
   box-shadow: 1px 1px 2px var(--black-text);
+}
+
+.buttons button:hover {
+  cursor: pointer;
+}
+
+.buttons button:active {
+  border: none;
+  border-radius: unset;
 }
 /* timer info container */
 
