@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pomodoro habbit tracker app</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  
+  <div id="container">
+    <div class="section user-info-container">
+      <h2 id="heading-content">Welcome Back!</h2>
+      <p class="content-description">Daily Pomodoro + Habit Tracker</p>
+    </div>
+
+    <div class="section timer-info-contianer">
+      <div id="timer-display">25:00</div>
+      <div class="buttons">
+        <button class="start">Start</button>
+        <button class="pause">Pause</button>
+        <button class="reset">Reset</button>
+      </div>
+    </div>
+
+    <div class="section traking-notes-container">
+      <!-- habits adding here-->
+      <h3>Today's Habbits</h3>
+      <input type="text" 
+        name="habit-title" 
+        id="habit-title"
+        placeholder="Habit Title"
+      >
+      <input type="text" 
+        name="habit-content" 
+        id="habit-content"
+        placeholder="Habit Description"
+      >
+      
+      <button class="adding-habit-btn">Add Habit</button>
+    </div>
+
+    <div class="tracking-notes">
+      <!--added habit shows here-->
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
