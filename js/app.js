@@ -46,8 +46,8 @@ function loadingData() {
 
 // adding new habits
 function addingNewHabit() {
-  const title = habitTitleInp.value
-  const content = habitContentInp.value 
+  const title = habitTitleInp.value.trim()
+  const content = habitContentInp.value.trim()
   if (!title) return
 
   // save to localStorge if not already saved
