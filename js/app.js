@@ -12,6 +12,21 @@ function checkingNotes() {
   }
 }
 
+// removing cards
+function removingCards(e) {
+  let selectionCard = e.target.parentElement.parentElement
+  if (trackNotes.contains(selectionCard)) {
+    trackNotes.removeChild(selectionCard)
+    
+    // also removing localStorage
+    console.log(selectionCard.children[0].children[1])
+    selectionTitle = selectionCard.children[0].children[1].textContent
+    if (selectionTitle in localStorage) {
+      localStorage.removeItem(selectionTitle)
+    }
+  }
+}
+
 // creating new cards
 function createNewCard(title, content) {
   let card = document.createElement('div')
@@ -38,7 +53,8 @@ function createNewCard(title, content) {
   bottomContent.classList.add('bottom-content')
   let deleteBtn = document.createElement('button')
   deleteBtn.classList.add('material-symbols-outlined')
-  deleteBtn.textContent = 'delete'    
+  deleteBtn.textContent = 'delete'  
+  deleteBtn.addEventListener('click', removingCards)  
   bottomContent.append(deleteBtn)
 
   card.style.backgroundColor = `hsl(${Math.random() * 360}, 60%, 40%)`
