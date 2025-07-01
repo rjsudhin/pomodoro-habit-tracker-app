@@ -13,46 +13,48 @@
 <body>
   
   <div id="container">
-    <div class="section user-info-container">
-      <h2 id="heading-content">Welcome Back!</h2>
-      <p class="content-description">Daily Pomodoro + Habit Tracker</p>
-    </div>
+    <div class="top-container">
+      <div class="user-info-container">
+        <h2 id="heading-content">Welcome Back!</h2>
+        <p class="content-description">Daily Pomodoro + Habit Tracker</p>
+      </div>
 
-    <div class="section timer-info-container">
-      <div id="timer-display">25:00</div>
-      <div class="buttons">
-        <button class="start">
-          <span class="material-symbols-outlined">
-            directions_run
-          </span>
-        </button>
-
-        <button class="pause">
-          <span class="material-symbols-outlined">
-            alarm_pause
-          </span>
-        </button>
-        <button class="reset">
-          <span class="material-symbols-outlined">
-            refresh
-          </span>
-        </button>
+      <div class="timer-info-container">
+        <div id="timer-display">25:00</div>
+        <div class="buttons">
+          <button class="start">
+            <span class="material-symbols-outlined">
+              directions_run
+            </span>
+          </button>
+  
+          <button class="pause">
+            <span class="material-symbols-outlined">
+              alarm_pause
+            </span>
+          </button>
+          <button class="reset">
+            <span class="material-symbols-outlined">
+              refresh
+            </span>
+          </button>
+        </div>
       </div>
     </div>
 
-    <div class="section traking-notes-container">
+
+    <div class="tracking-notes-container">
       <!-- habits adding here-->
       <h3>Today's Habbits</h3>
       <input type="text" 
         name="habit-title" 
         id="habit-title"
-        placeholder="Habit Title"
-      >
+        placeholder="Habit Title">
+
       <input type="text" 
         name="habit-content" 
         id="habit-content"
-        placeholder="Habit Description"
-      >
+        placeholder="Habit Description">
       
       <button class="adding-habit-btn">
         <span class="material-symbols-outlined">
@@ -60,12 +62,13 @@
         </span>
       </button>
     </div>
+    
+    <!-- new notes added here -->
+    <div id="track-notes">
+      
+    </div>
   </div>
 
-  <!-- new notes added here -->
-  <div id="track-notes" class="section">
-    
-  </div>
   <script src="js/app.js"></script>
 </body>
 </html>

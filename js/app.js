@@ -32,7 +32,7 @@ function createNewCard(title, content) {
 
 // loading stored data from localStorage (clears old Ui first)
 function loadingData() {
-  
+  trackNotes.innerHTML = ''
   let storedData = localStorage
   for (let i = 0; i < storedData.length; i++) {
     const key = localStorage.key(i)
