@@ -27,9 +27,8 @@
 
 ## 📸 Screenshot
 
-![App Screenshot](screenshot.png)
+![App Screenshot](./images/pomodoro-app.png)
 
-> *You can update this with a real screenshot from your app*
 
 ---
 
@@ -55,4 +54,34 @@
 ---
 
 ## 📁 Project Structure
+```bash
+📦 pomodoro-habit-tracker-app
+├── index.html
+├── styles.css
+├── js/
+│ └── app.js
+└── screenshot.png
+```
 
+---
+
+## 🧠 Upcoming Features
+
+- **Functional Pomodoro countdown timer**
+- **Pomodoro session tracking history**
+- **Drag-and-drop habit cards**
+- **Sound & notification support**
+
+---
+
+## 📄 License
+This project is licensed under the MIT License — feel free to use and modify!
+
+---
+
+## 🙌 Author
+
+Made with ❤️ by Sudhin Raj
+Feel free to ⭐ star the repo if you like it!
+
+---
