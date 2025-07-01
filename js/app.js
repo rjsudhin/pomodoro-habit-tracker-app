@@ -1,9 +1,9 @@
 
+let container = document.querySelector('#container')
 let habitTitleInp = document.querySelector('#habit-title')
 let habitContentInp = document.querySelector('#habit-content')
 let addingHabitBtn = document.querySelector('.adding-habit-btn')
-const trackingNotes = document.querySelector('.tracking-notes')
-
+let trackNotes = document.querySelector('#track-notes')
 checkingNotes()
 
 function checkingNotes() {
@@ -14,7 +14,6 @@ function checkingNotes() {
 
 // creating new cards
 function createNewCard(title, content) {
-  // trackingNotes.innerHTML = ''
   const card = document.createElement('div')
   card.classList.add('new-card')
 
@@ -27,20 +26,21 @@ function createNewCard(title, content) {
   cardContent.textContent = content
 
   card.append(cardTitle, cardContent)
-  trackingNotes.append(card)
+  trackNotes.append(card)
 }
 
 
 // loading stored data from localStorage (clears old Ui first)
 function loadingData() {
-  trackingNotes.innerHTML = ''    // clear prevous cards first
+  
   let storedData = localStorage
   for (let i = 0; i < storedData.length; i++) {
     const key = localStorage.key(i)
     console.log(`${key}`)
     const value = localStorage[key]
     console.log(`--${value}-`)
-    createNewCard(key, value)
+    card = createNewCard(key, value)
+    console.log(card)
   }
 }
 

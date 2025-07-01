@@ -148,3 +148,15 @@ body {
 .adding-habit-btn:active {
   border-radius: unset;
 }
+
+/* tracking notes section */
+.new-card {
+  border: 1px solid black;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+}
+/* tracking notes section */
