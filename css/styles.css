@@ -155,6 +155,10 @@ body {
 
 /* tracking-note-container */
 
+#track-notes {
+  margin-top: 1rem;
+}
+
 
 #track-notes .new-card {
   padding: 1rem;
@@ -163,7 +167,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 200px;
-  border: 1px solid black;
   border-radius: var(--border-curve);
   gap: 1rem;
 }
@@ -209,9 +212,7 @@ body {
   cursor: pointer;
 }
 
-.bottom-content button:active {
 
-}
 
 
 

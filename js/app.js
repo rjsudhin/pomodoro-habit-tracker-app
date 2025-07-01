@@ -1,5 +1,6 @@
 
 let container = document.querySelector('#container')
+let trackingNotesContainer = document.querySelector('.tracking-notes-container')
 let habitTitleInp = document.querySelector('#habit-title')
 let habitContentInp = document.querySelector('#habit-content')
 let addingHabitBtn = document.querySelector('.adding-habit-btn')
@@ -12,17 +13,30 @@ function checkingNotes() {
   }
 }
 
+// checking the cards note counts
+function checkingCardsCount() {
+  if (trackNotes.childElementCount >= 4) {
+    console.log('Note limit Found!')
+    // removing note creating container 
+    container.removeChild(trackingNotesContainer)
+  } else {
+    container.insertBefore(trackingNotesContainer, trackNotes)
+  }
+}
+
 // removing cards
 function removingCards(e) {
   let selectionCard = e.target.parentElement.parentElement
   if (trackNotes.contains(selectionCard)) {
     trackNotes.removeChild(selectionCard)
-    
+    console.log('removing note')
     // also removing localStorage
     console.log(selectionCard.children[0].children[1])
     selectionTitle = selectionCard.children[0].children[1].textContent
     if (selectionTitle in localStorage) {
       localStorage.removeItem(selectionTitle)
+      // check everytime for getting the create habit section
+      checkingCardsCount()
     }
   }
 }
@@ -60,6 +74,8 @@ function createNewCard(title, content) {
   card.style.backgroundColor = `hsl(${Math.random() * 360}, 60%, 40%)`
   card.append(topContent, bottomContent)
   trackNotes.append(card)
+  // checking how many note cards contains 
+  checkingCardsCount()
 }
 
 
