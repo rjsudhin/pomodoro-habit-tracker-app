@@ -169,8 +169,48 @@ body {
 }
 
 .new-card > div {
-  border: 1px solid #eee;
   width: 100%;
+}
+
+.new-card .top-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  padding: 1rem 0;
+}
+
+.top-content .card-title {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.top-content .card-content {
+  font-size: 0.9rem;
+  text-transform: unset;
+}
+
+
+.new-card .bottom-content {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 1rem;
+}
+
+.bottom-content button {
+  font-size: 1.8rem;
+  color: var(--text);
+  background-color: transparent;
+  border: none;
+}
+
+.bottom-content button:hover {
+  cursor: pointer;
+}
+
+.bottom-content button:active {
+
 }
 
 

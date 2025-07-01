@@ -20,6 +20,10 @@ function createNewCard(title, content) {
   let topContent = document.createElement('div')
   topContent.classList.add('top-content')
 
+  let icon = document.createElement('span')
+  icon.classList.add('material-symbols-outlined')
+  icon.textContent = 'bolt'
+  
   let cardTitle = document.createElement('h3')
   cardTitle.classList.add('card-title')
   cardTitle.textContent = title
@@ -28,10 +32,10 @@ function createNewCard(title, content) {
   cardContent.classList.add('card-content')
   cardContent.textContent = content
 
-
-  topContent.append(cardTitle, cardContent)
+  topContent.append(icon, cardTitle, cardContent)
 
   let bottomContent = document.createElement('div')
+  bottomContent.classList.add('bottom-content')
   let deleteBtn = document.createElement('button')
   deleteBtn.classList.add('material-symbols-outlined')
   deleteBtn.textContent = 'delete'    
