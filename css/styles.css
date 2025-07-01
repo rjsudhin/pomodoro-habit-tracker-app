@@ -11,7 +11,7 @@
 :root {
   --bg: #0f1424;
   --text: #fff;
-  --black-text: #252525;
+  --black-text: #252525c2;
   --card-bg: #1c1f4a;
   --accent: #ff8c66;
   --input-border: 2px solid rgb(107, 107, 172);
@@ -147,7 +147,12 @@ body {
 .tracking-notes-container .adding-habit-btn {
   width: 120px;
   height: 30px;
+  background-color: var(--accent);
+  border: none;
+  border-radius: var(--border-curve);
+  outline: none;
 }
+
 /* tracking-note-container */
 
 
