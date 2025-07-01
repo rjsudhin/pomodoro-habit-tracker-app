@@ -33,8 +33,8 @@ function createNewCard(title, content) {
 
   let bottomContent = document.createElement('div')
   let deleteBtn = document.createElement('button')
-  deleteBtn.textContent = 'delete'
-  deleteBtn.classList.add('delete-btn')
+  deleteBtn.classList.add('material-symbols-outlined')
+  deleteBtn.textContent = 'delete'    
   bottomContent.append(deleteBtn)
 
   card.style.backgroundColor = `hsl(${Math.random() * 360}, 60%, 40%)`
