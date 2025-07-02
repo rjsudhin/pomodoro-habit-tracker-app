@@ -3,6 +3,8 @@ let currentTime = timerDuration
 let timerDisplay = document.querySelector('#timer-display')
 let startBtn = document.querySelector('.start')
 let pauseBtn = document.querySelector('.pause')
+let resetBtn = document.querySelector('.reset')
+
 let isRunning = false
 let timerIntervel = null
 
@@ -116,6 +118,21 @@ function addingNewHabit() {
   habitContentInp.value = ''
 }
 
+
+// reseting the timer
+function resetTimer() {
+  console.log('this is working')
+  clearInterval(timerIntervel)
+  timerIntervel = null
+  resetThings()
+  isRunning = false
+}
+
+function resetThings() {
+  currentTime = timerDuration
+  updateTimer(currentTime)
+}
+
 // pausing the timer
 function pausingTimer() {
   clearInterval(timerIntervel)
@@ -157,3 +174,4 @@ function updateTimer(time) {
 addingHabitBtn.addEventListener('click', addingNewHabit)
 startBtn.addEventListener('click', runningTimer)
 pauseBtn.addEventListener('click', pausingTimer)
+resetBtn.addEventListener('click', resetTimer)
