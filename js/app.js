@@ -1,3 +1,9 @@
+let timerDuration = 25 * 60
+let currentTime = timerDuration
+let timerDisplay = document.querySelector('#timer-display')
+let startBtn = document.querySelector('.start')
+let isRunning = false
+let timerIntervel = null
 
 let container = document.querySelector('#container')
 let trackingNotesContainer = document.querySelector('.tracking-notes-container')
@@ -109,7 +115,36 @@ function addingNewHabit() {
   habitContentInp.value = ''
 }
 
+// running timer 
+function runningTimer() {
+  if (isRunning) return
+  console.log('this is fixing')
+  isRunning = true
+  timerIntervel = setInterval(() => {
+    if (currentTime > 0) {
+      currentTime--
+      updateTimer(currentTime)
+    } else {
+      clearInterval(timerIntervel)
+    }
+  })
+}
+
+
+
+function convertTime(seconds) {
+  let mins = Math.floor(seconds / 60)
+  let secs = seconds % 25
+  return `${String(mins).padStart(2, '0')}: ${String(secs).padStart(2, '0')}`
+}
+
+// update timer 
+function updateTimer(time) {
+  timerDisplay.textContent = convertTime(time)
+}
+
 
 
 // Event Listeners 
 addingHabitBtn.addEventListener('click', addingNewHabit)
+startBtn.addEventListener('click', runningTimer)
