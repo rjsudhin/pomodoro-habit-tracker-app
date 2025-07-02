@@ -152,14 +152,14 @@ function runningTimer() {
       isRunning = false
       currentTime = timerDuration
     }
-  })
+  }, 1000)
 }
 
 
 
 function convertTime(seconds) {
   let mins = Math.floor(seconds / 60)
-  let secs = seconds % 25
+  let secs = seconds % 60
   return `${String(mins).padStart(2, '0')}: ${String(secs).padStart(2, '0')}`
 }
 
