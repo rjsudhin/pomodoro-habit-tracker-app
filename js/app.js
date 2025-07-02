@@ -125,7 +125,6 @@ function pausingTimer() {
 // running timer 
 function runningTimer() {
   if (isRunning) return
-  console.log('this is fixing')
   isRunning = true
   timerIntervel = setInterval(() => {
     if (currentTime > 0) {
