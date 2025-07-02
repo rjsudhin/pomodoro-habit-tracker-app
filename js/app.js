@@ -121,7 +121,6 @@ function addingNewHabit() {
 
 // reseting the timer
 function resetTimer() {
-  console.log('this is working')
   clearInterval(timerIntervel)
   timerIntervel = null
   resetThings()
