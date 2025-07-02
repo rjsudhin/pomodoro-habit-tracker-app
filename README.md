@@ -67,7 +67,6 @@
 
 ## 🧠 Upcoming Features
 
-- **Functional Pomodoro countdown timer**
 - **Pomodoro session tracking history**
 - **Drag-and-drop habit cards**
 - **Sound & notification support**
