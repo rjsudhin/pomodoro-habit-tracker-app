@@ -26,7 +26,11 @@ function checkingNotes() {
 
 // habit tracking when it clicks on on habit
 function habitTracking(e) {
+  // change the tracker to true
   tracker = !tracker
+  if (tracker) {
+    console.log(`You are selected "${e.target.children[1].textContent}"`)
+  }
 }
 
 // checking the cards note counts
