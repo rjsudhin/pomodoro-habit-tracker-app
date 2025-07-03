@@ -159,7 +159,7 @@ function runningTimer() {
 function convertTime(seconds) {
   let mins = Math.floor(seconds / 60)
   let secs = seconds % 60
-  return `${String(mins).padStart(2, '0')}: ${String(secs).padStart(2, '0')}`
+  return `${String(mins).padStart(2, '0')} : ${String(secs).padStart(2, '0')}`
 }
 
 // update timer 
