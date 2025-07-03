@@ -91,7 +91,7 @@ function createNewCard(title, content) {
   bottomContent.append(deleteBtn)
 
   // random hsl colors applying in every card when it creates
-  card.style.backgroundColor = `hsl(${Math.random() * 360}, 60%, 40%)`
+  card.style.backgroundColor = `hsl(${Math.random() * 360}, 50%, 20%)`
   // adding other components in card cotnainer
   card.append(topContent, bottomContent)
   // adding card contents in track note container
