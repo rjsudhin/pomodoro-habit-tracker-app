@@ -26,7 +26,14 @@ function checkingNotes() {
 
 // habit tracking when it clicks on on habit
 function habitTracking(e) {
-  console.log(e.target.children[1])     // this is a bugy bug fix in later
+  tracker = !tracker
+  let parent = e.target.parentElement.previousElementSibling
+  let noteTitle = parent.children[1].textContent
+  console.log(noteTitle)
+  if (tracker) {
+    // only works habit tracker to run
+    // selecting condition true here
+  }
 }
 
 // checking the cards note counts
@@ -92,6 +99,7 @@ function createNewCard(title, content) {
   let doBtn = document.createElement('button')
   doBtn.classList.add('do-btn')
   doBtn.textContent = 'do'
+  doBtn.addEventListener('click', habitTracking)
   // delet button creation
   let deleteBtn = document.createElement('button')
   // button's adding a an icon
@@ -105,8 +113,6 @@ function createNewCard(title, content) {
   card.style.backgroundColor = `hsl(${Math.random() * 360}, 50%, 20%)`
   // adding other components in card cotnainer
   card.append(topContent, bottomContent)
-  // card event 
-  card.addEventListener('click', habitTracking)
   // adding card contents in track note container
   trackNotes.append(card)
   // checking how many note cards contains 
