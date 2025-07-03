@@ -37,6 +37,7 @@ body {
   width: 100%;
   max-width: 680px;
   padding: 1rem;
+  margin: 1rem 0;
 }
 
 #container > div {
@@ -216,9 +217,9 @@ body {
 
 @media (min-width: 680px) {
   body {
-    #container {
-      margin: 2rem 0;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
