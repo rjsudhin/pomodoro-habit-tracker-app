@@ -198,7 +198,7 @@ body {
 
 .new-card .bottom-content {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding-bottom: 1rem;
 }
 

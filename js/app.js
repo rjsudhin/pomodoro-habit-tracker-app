@@ -88,6 +88,10 @@ function createNewCard(title, content) {
   // another content container creation
   let bottomContent = document.createElement('div')
   bottomContent.classList.add('bottom-content')
+  // do button creation
+  let doBtn = document.createElement('button')
+  doBtn.classList.add('do-btn')
+  doBtn.textContent = 'do'
   // delet button creation
   let deleteBtn = document.createElement('button')
   // button's adding a an icon
@@ -95,7 +99,7 @@ function createNewCard(title, content) {
   deleteBtn.textContent = 'delete'  
   // button's delete event 
   deleteBtn.addEventListener('click', removingCards)  
-  bottomContent.append(deleteBtn)
+  bottomContent.append(doBtn, deleteBtn)
 
   // random hsl colors applying in every card when it creates
   card.style.backgroundColor = `hsl(${Math.random() * 360}, 50%, 20%)`
