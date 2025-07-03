@@ -218,7 +218,6 @@ body {
 @media (min-width: 680px) {
   body {
     display: flex;
-    justify-content: center;
     align-items: center;
   }
 }
