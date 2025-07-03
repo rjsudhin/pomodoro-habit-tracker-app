@@ -5,6 +5,8 @@ let startBtn = document.querySelector('.start')
 let pauseBtn = document.querySelector('.pause')
 let resetBtn = document.querySelector('.reset')
 
+let tracker = false
+
 let isRunning = false
 let timerIntervel = null
 
@@ -20,6 +22,11 @@ function checkingNotes() {
   if (localStorage.length > 0) {
     loadingData()
   }
+}
+
+// habit tracking when it clicks on on habit
+function habitTracking(e) {
+  tracker = !tracker
 }
 
 // checking the cards note counts
@@ -94,6 +101,8 @@ function createNewCard(title, content) {
   card.style.backgroundColor = `hsl(${Math.random() * 360}, 50%, 20%)`
   // adding other components in card cotnainer
   card.append(topContent, bottomContent)
+  // card event 
+  card.addEventListener('click', habitTracking)
   // adding card contents in track note container
   trackNotes.append(card)
   // checking how many note cards contains 
@@ -158,18 +167,22 @@ function pausingTimer() {
 
 // running timer 
 function runningTimer() {
-  if (isRunning) return
-  isRunning = true
-  timerIntervel = setInterval(() => {
-    if (currentTime > 0) {
-      currentTime--
-      updateTimer(currentTime)
-    } else {
-      clearInterval(timerIntervel)
-      isRunning = false
-      currentTime = timerDuration
-    }
-  }, 1000)
+  if (tracker) {
+    if (isRunning) return
+    isRunning = true
+    timerIntervel = setInterval(() => {
+      if (currentTime > 0) {
+        currentTime--
+        updateTimer(currentTime)
+      } else {
+        clearInterval(timerIntervel)
+        isRunning = false
+        currentTime = timerDuration
+      }
+    }, 1000)
+  } else {
+    console.log('select any habit from you creates')
+  }
 }
 
 
