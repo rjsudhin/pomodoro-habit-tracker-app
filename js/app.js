@@ -38,9 +38,8 @@ function removingCards(e) {
   let selectionCard = e.target.parentElement.parentElement
   if (trackNotes.contains(selectionCard)) {
     trackNotes.removeChild(selectionCard)
-    console.log('removing note')
+
     // also removing localStorage
-    console.log(selectionCard.children[0].children[1])
     selectionTitle = selectionCard.children[0].children[1].textContent
     if (selectionTitle in localStorage) {
       localStorage.removeItem(selectionTitle)
