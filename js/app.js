@@ -131,6 +131,9 @@ function addingNewHabit() {
   // clear input
   habitTitleInp.value = ''
   habitContentInp.value = ''
+
+  // input focusing for next adding next habit
+  habitTitleInp.focus()
 }
 
 
