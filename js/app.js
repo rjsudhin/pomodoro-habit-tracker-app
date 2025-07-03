@@ -188,8 +188,9 @@ function runningTimer() {
         clearInterval(timerIntervel)
         isRunning = false
         currentTime = timerDuration
+        tracker = false
       }
-    }, 1000)
+    },1000)
   } else {
     console.log('select any habit from you creates')
   }
