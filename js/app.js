@@ -29,6 +29,7 @@ function checkingCardsCount() {
     // removing note creating container 
     container.removeChild(trackingNotesContainer)
   } else {
+    // ADDING TRACKING CONTAINER 
     container.insertBefore(trackingNotesContainer, trackNotes)
   }
 }
@@ -51,36 +52,49 @@ function removingCards(e) {
 
 // creating new cards
 function createNewCard(title, content) {
+  // card creation
   let card = document.createElement('div')
   card.classList.add('new-card')
 
+  // top content container creation
   let topContent = document.createElement('div')
   topContent.classList.add('top-content')
 
+  // icon creation
   let icon = document.createElement('span')
   icon.classList.add('material-symbols-outlined')
   icon.textContent = 'bolt'
   
+  // content title creation
   let cardTitle = document.createElement('h3')
   cardTitle.classList.add('card-title')
   cardTitle.textContent = title
 
+  // content content' element creation
   let cardContent = document.createElement('p')
   cardContent.classList.add('card-content')
   cardContent.textContent = content
 
+  // adding components here
   topContent.append(icon, cardTitle, cardContent)
 
+  // another content container creation
   let bottomContent = document.createElement('div')
   bottomContent.classList.add('bottom-content')
+  // delet button creation
   let deleteBtn = document.createElement('button')
+  // button's adding a an icon
   deleteBtn.classList.add('material-symbols-outlined')
   deleteBtn.textContent = 'delete'  
+  // button's delete event 
   deleteBtn.addEventListener('click', removingCards)  
   bottomContent.append(deleteBtn)
 
+  // random hsl colors applying in every card when it creates
   card.style.backgroundColor = `hsl(${Math.random() * 360}, 60%, 40%)`
+  // adding other components in card cotnainer
   card.append(topContent, bottomContent)
+  // adding card contents in track note container
   trackNotes.append(card)
   // checking how many note cards contains 
   checkingCardsCount()
@@ -92,7 +106,9 @@ function loadingData() {
   trackNotes.innerHTML = ''
   let storedData = localStorage
   for (let i = 0; i < storedData.length; i++) {
+    // getting the key of object
     const key = localStorage.key(i)
+    // getting the value of key
     const value = localStorage[key]
     createNewCard(key, value)
   }
