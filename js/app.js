@@ -27,7 +27,6 @@ function checkingNotes() {
 // habit tracking when it clicks on on habit
 function habitTracking(e) {
   if (e.target != 'BUTTON') {
-    console.log('this is working')
     // change the tracker to true
     tracker = !tracker
     if (tracker) {
