@@ -213,7 +213,13 @@ body {
 }
 
 
-
+@media (min-width: 680px) {
+  body {
+    #container {
+      margin: 2rem 0;
+    }
+  }
+}
 
 
 
