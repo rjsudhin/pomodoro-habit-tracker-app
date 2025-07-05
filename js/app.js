@@ -98,7 +98,8 @@ function createNewCard(title, content) {
   // do button creation
   let doBtn = document.createElement('button')
   doBtn.classList.add('do-btn')
-  doBtn.textContent = 'do'
+  doBtn.classList.add('material-symbols-outlined')
+  doBtn.textContent = 'arrow_circle_right'
   doBtn.addEventListener('click', habitTracking)
   // delet button creation
   let deleteBtn = document.createElement('button')
